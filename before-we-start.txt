@@ -1,0 +1,3 @@
+cp /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
+
+tambien se recomienda usar los temas de copycat (https://github.com/lcpz/awesome-copycats) para empezar
