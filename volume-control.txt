@@ -1,0 +1,38 @@
+There are two main ways of doing volumen control, the first one is by spawning a volumen manager on the rc.lua and the second one is by inside of the theme or rc specifing a key to execute a command that changes volumen on x percentage and
+then having a widget that checks the value of the audio manager and displays it.
+
+method 1
+programs that might use:
+volumeicon
+
+
+
+metod 2 (the key in rc.lua and command one):
+links:
+https://www.reddit.com/r/awesomewm/comments/yigl6d/volume_keys_not_working/
+
+you first need to check for the key keycode to use, after this, considering you are using pipewire, the command would be:
+
+
+  ==== try this block at the end of the awful.key lines of rc.lua, usually works out of the box ========
+
+  
+  awful.key(
+    { }, "XF86AudioLowerVolume",
+    function() 
+        awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")
+    end,
+    {description = "lower volume", group = "system"}),
+awful.key(
+    { }, "XF86AudioRaiseVolume",
+    function()
+        awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")
+    end,
+    {description = "increase volume", group = "system"}),
+
+
+    ==== try this block at the end of the awful.key lines of rc.lua, usually works out of the box ========
+
+      
+      where "XF86AudioLowerVolume" and "XF86AudioRaiseVolume" are the keys and "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+      si the command to do (in this case up volumen by %5).
