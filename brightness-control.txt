@@ -1,5 +1,6 @@
 links:
 https://askubuntu.com/questions/96662/brightness-control-on-awesome-windowing-manager
+https://www.reddit.com/r/archlinux/comments/wyu7tl/cant_use_function_key_and_xbacklight_command_to/
 
 In the globalkeys = awful.util.table.join( section of ~/.config/awesome/rc.lua:
 
@@ -12,3 +13,10 @@ In the globalkeys = awful.util.table.join( section of ~/.config/awesome/rc.lua:
 
 
     (this solution needs xbacklight)
+
+
+Also it can be use the command of sudo pacman -Sy brightnessctl
+
+ brightnessctl set 3%+ increase by 3%
+
+brightnessctl set 3%- decrease by 3% 
