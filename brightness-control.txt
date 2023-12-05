@@ -1,0 +1,14 @@
+links:
+https://askubuntu.com/questions/96662/brightness-control-on-awesome-windowing-manager
+
+In the globalkeys = awful.util.table.join( section of ~/.config/awesome/rc.lua:
+
+    -- Brightness
+
+    awful.key({ }, "XF86MonBrightnessDown", function ()
+        awful.util.spawn("xbacklight -dec 15") end),
+    awful.key({ }, "XF86MonBrightnessUp", function ()
+        awful.util.spawn("xbacklight -inc 15") end),
+
+
+    (this solution needs xbacklight)
