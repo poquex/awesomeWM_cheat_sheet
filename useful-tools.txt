@@ -1,3 +1,4 @@
 pavucontrol
 diskie
 nitrogen
+volumeicon
