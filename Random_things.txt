@@ -1,0 +1,21 @@
+this are usseful information that Im to lazy to clasify.
+
+at the end of rc.lua you can add this to spawn some useful applets
+
+---- CUSTOM WIFI NM-APPLET
+awful.util.spawn_with_shell("pgrep -u $USER -x nm-applet > /dev/null || (nm-applet &)")
+---- CUSTOM WIFI NM-APPLET
+
+---- CUSTOM WALLPAPER
+awful.spawn.with_shell("nitrogen --restore")
+---- CUSTOM WALLPAPER
+
+----- CUSTOM VOLUMEN CONTROL
+awful.util.spawn_with_shell ("pgrep -u $USER -x pa-applet > /dev/null || (pa-applet &)")
+----- CUSTOM VOLUMEN CONTROL
+
+
+
+for more info, googleit.
+
+
