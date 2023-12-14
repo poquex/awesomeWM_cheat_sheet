@@ -3,3 +3,4 @@ diskie
 nitrogen
 volumeicon
 gnome-disks
+arandr
