@@ -2,3 +2,4 @@ pavucontrol
 diskie
 nitrogen
 volumeicon
+gnome-disks
