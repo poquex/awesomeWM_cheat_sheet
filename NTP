@@ -1,0 +1,45 @@
+sudo systemctl enable systemd-timesyncd
+sudo systemctl start systemd-timesyncd
+
+To automatically sync the time with NTP (Network Time Protocol) on Arch Linux, you can use the `systemd-timesyncd` service, which is included in the systemd suite. Here's how you can enable and start it:
+
+1. **Install `systemd` if not already installed:**
+   ```bash
+   sudo pacman -Syu systemd
+   ```
+
+2. **Enable and start `systemd-timesyncd`:**
+   ```bash
+   sudo systemctl enable systemd-timesyncd
+   sudo systemctl start systemd-timesyncd
+   ```
+
+   The `enable` command ensures that the service starts at boot, and the `start` command starts it immediately.
+
+3. **Check the status of `systemd-timesyncd`:**
+   ```bash
+   sudo systemctl status systemd-timesyncd
+   ```
+
+   This command will show you information about the current status of the service, and you should see lines indicating successful synchronization.
+
+The default configuration of `systemd-timesyncd` will automatically use the NTP servers configured in the `/etc/systemd/timesyncd.conf` file. If you want to customize the NTP servers, you can edit that configuration file. Open the file with a text editor, for example:
+
+```bash
+sudo nano /etc/systemd/timesyncd.conf
+```
+
+Edit the `NTP=` line to include the NTP servers you want to use, separating multiple servers with a space. For example:
+
+```ini
+[Time]
+NTP=ntp.example.com 0.pool.ntp.org 1.pool.ntp.org
+```
+
+Save the file and restart the `systemd-timesyncd` service:
+
+```bash
+sudo systemctl restart systemd-timesyncd
+```
+
+Now, your Arch Linux system should automatically sync its time with the specified NTP servers.
