@@ -43,3 +43,15 @@ sudo systemctl restart systemd-timesyncd
 ```
 
 Now, your Arch Linux system should automatically sync its time with the specified NTP servers.
+ç
+
+
+
+
+
+
+================================================
+
+LINKS utiles:
+
+https://wiki.archlinux.org/title/System_time#Time_zone
