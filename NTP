@@ -48,6 +48,22 @@ Now, your Arch Linux system should automatically sync its time with the specifie
 
 
 
+//// BEST METHOD //////
+
+/// terminal ////
+sudo nano /etc/ntp.conf
+
+/// adentro del archivo ntp.conf añadir: ////
+# Chile Shoa NTP server
+server ntp.shoa.cl iburst
+
+/// terminal ////
+sudo timedatectl set-timezone America/Santiago
+
+
+
+
+
 
 
 ================================================
