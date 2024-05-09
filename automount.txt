@@ -2,8 +2,15 @@ links:
 https://www.reddit.com/r/awesomewm/comments/lvf3e8/automounting_new_removable_media/
 https://wiki.archlinux.org/index.php/Udisks
 https://github.com/coldfix/udiskie
+https://wiki.archlinux.org/title/PCManFM
 
 Lo que se recomienda es usar udisk con algun front end, este puede ser un widget nativo de awesome o un applet.
 La manera en que yo lo hice y considero la mas simple y rapida es usar udiskie
 
 pacman -S udsikie
+
+
+
+Tambien sirve user pcmanfm como demonio
+
+pcmanfm --daemon-mode
