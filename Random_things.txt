@@ -14,8 +14,11 @@ awful.spawn.with_shell("nitrogen --restore")
 awful.util.spawn_with_shell ("pgrep -u $USER -x pa-applet > /dev/null || (pa-applet &)")
 ----- CUSTOM VOLUMEN CONTROL
 
+----- Set up extra monitors
+the tool that I use is Arand for X, no solution for wayland yet
+with Arand create a custom script and then call it on the rc.lua with
 
+awful.spawn.with_shell("bash /home/pq10x/.screenlayout/<name_of_the_file>")
+-----  Set up extra monitors
 
 for more info, googleit.
-
-
